@@ -41,3 +41,7 @@ jobs:
 
       - name: Build Docker image
         run: docker build -t workflows .
+
+      - name: Tag Docker image
+        run: |
+          docker tag workflows:latest 565393053697.dkr.ecr.ap-south-1.amazonaws.com/workflows:latest
