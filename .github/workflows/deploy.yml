@@ -45,3 +45,11 @@ jobs:
       - name: Tag Docker image
         run: |
           docker tag workflows:latest 565393053697.dkr.ecr.ap-south-1.amazonaws.com/workflows:latest
+
+      - name: Push Docker image to ECR
+        run: |
+          docker push 565393053697.dkr.ecr.ap-south-1.amazonaws.com/workflows:latest
+
+      - name: Tag Docker image
+        run: |
+          docker tag workflows:latest 565393053697.dkr.ecr.ap-south-1.amazonaws.com/workflows:latest
