@@ -17,15 +17,6 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v6
 
-      - name: Show GitHub identity
-        run: |
-          echo "Repository: ${{ github.repository }}"
-          echo "Ref: ${{ github.ref }}"
-          echo "Branch: ${{ github.ref_name }}"
-          echo "Event: ${{ github.event_name }}"
-          echo "Repository owner ID: ${{ github.repository_owner_id }}"
-          echo "Repository ID: ${{ github.repository_id }}"
-
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v5
         with:
